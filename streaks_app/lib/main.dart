@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Streaks App',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         ),
         home: HomePage(),
       ),
@@ -115,11 +115,13 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            TimeShow()
-          ],
+        child: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              TimeShow()
+            ],
+          ),
         ),
       )
     );
